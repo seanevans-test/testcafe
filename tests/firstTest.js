@@ -1,7 +1,8 @@
 fixture("First Fixture")
-    .page("https://devexpress.github.io/testcafe/example/");
+    .page("https://devexpress.github.io/testcafe/");
 
-test("First Test", async t => {
+test.page("https://devexpress.github.io/testcafe/example/")
+("First Test", async t => {
     await t 
         .typeText("#developer-name", "sean")
         .click("#macos")
