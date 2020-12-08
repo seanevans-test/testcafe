@@ -12,4 +12,6 @@ test("iFrame test", async t =>{
         .click(textArea)
         .pressKey('ctrl+a delete')
         .typeText(textArea, 'Hello')
-})
+        .expect(textArea.innerText).contains('Hello')
+        .switchToMainWindow();
+});
