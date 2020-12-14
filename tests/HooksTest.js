@@ -1,5 +1,11 @@
 fixture.meta('version', '1')("First Fixture")
-    .page("https://devexpress.github.io/testcafe/");
+    .page("https://devexpress.github.io/testcafe/")
+    .beforeEach(async t =>{
+        await t
+            .maximizeWindow()
+            .setTestSpeed(0.1)
+            .setPageLoadTimeout
+    });
 
 test.meta('env', 'production')
 .page("https://devexpress.github.io/testcafe/example/")
